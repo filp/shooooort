@@ -7,13 +7,10 @@ gem "bcrypt-ruby", "3.1.5"
 gem "pg"
 gem "oj"
 gem "bourbon"
-gem "flutie"
-gem "haml-rails"
 gem "sass", "~> 3.4.9"
 gem "sass-rails"
 gem "puma", "~> 2.10"
 gem "foreman", require: false
-gem "jquery-rails"
 
 group :development do
   gem "spring"
