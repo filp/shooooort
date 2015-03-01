@@ -28,29 +28,4 @@ ActiveRecord::Schema.define(version: 20150301113750) do
   add_index "short_urls", ["short_code"], name: "index_short_urls_on_short_code", using: :btree
   add_index "short_urls", ["times_visited"], name: "index_short_urls_on_times_visited", using: :btree
 
-  create_table "tasks", force: :cascade do |t|
-    t.boolean  "complete",               default: false, null: false
-    t.integer  "creator_id",                             null: false
-    t.integer  "actor_id",                               null: false
-    t.string   "label",      limit: 255,                 null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "tasks", ["actor_id"], name: "index_tasks_on_actor_id", using: :btree
-  add_index "tasks", ["complete"], name: "index_tasks_on_complete", using: :btree
-  add_index "tasks", ["creator_id"], name: "index_tasks_on_creator_id", using: :btree
-
-  create_table "users", force: :cascade do |t|
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.string   "email",              limit: 255, null: false
-    t.string   "encrypted_password", limit: 128, null: false
-    t.string   "confirmation_token", limit: 128
-    t.string   "remember_token",     limit: 128, null: false
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", using: :btree
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
-
 end
