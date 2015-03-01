@@ -6,6 +6,7 @@ gem "bcrypt-ruby", "3.1.5"
 
 gem "pg"
 gem "oj"
+gem "rails-api"
 gem "bourbon"
 gem "sass", "~> 3.4.9"
 gem "sass-rails"
